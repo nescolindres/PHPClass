@@ -6,6 +6,35 @@ $company_citystatezip = "Los Angeles, CA. 91344";
 $debug;
 $car_array;
 
+
+// ----------------------------------   lab 6   --------------------------------
+
+print "<h2>Lab 6 Assignment</h2>";
+
+function getHeader($name, $color) {
+	$data = "<table style='background-color:$color;width:100%'><tr><td>";
+	$data .= "<h1 style='text-align:center'>$name</h1>"; 
+	$data = $data . "</td></tr></table>"; 
+	return $data;
+}
+
+function getFooter($address,$cityStateZip,$color) {
+	$data = "<table style='background-color:$color;width:100%'><tr><td>";
+	$data .= "<p style='text-align:center'>$address $cityStateZip</p>"; 
+	$data = $data . "</td></tr></table>"; 
+	return $data;
+}
+
+print getHeader($company_name,"aqua");
+print getFooter($company_address, $company_citystatezip, "Aquamarine");
+
+
+print "<hr>";   //    This draws a line between lab assignments
+
+// ----------------------------------   lab 6   --------------------------------
+
+
+// ----------------------------------   lab 5   --------------------------------
 print "<h2>Lab 5 Assignment</h2>";
 
 function  create_array_cars (  )  {
@@ -34,6 +63,9 @@ displayProduct($car_array);
 
 
 print "<hr>";   //    This draws a line between lab assignments
+
+// ----------------------------------   lab 5   --------------------------------
+
 
 
 
