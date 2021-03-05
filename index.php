@@ -1,4 +1,35 @@
 <?php
+// ----------------------------------   lab 7  --------------------------------
+print "<h2>Lab 7 Assignment</h2>";
+
+class Company {
+
+public $company_name = "Colindres-Benz Automaker";
+public $company_address = "1234 Automaker Dr.";
+public $company_citystatezip = "Los Angeles, CA. 91344";
+
+function getHeader($color) {
+	$data = "<table style='background-color:$color;width:100%'><tr><td>";
+	$data .= "<h1 style='text-align:center'>$this->company_name</h1>"; 
+	$data = $data . "</td></tr></table>"; 
+	return $data;
+}
+
+function getFooter($color) {
+	$data = "<table style='background-color:$color;width:100%'><tr><td>";
+	$data .= "<p style='text-align:center'>$this->company_address $this->company_citystatezip</p>"; 
+	$data = $data . "</td></tr></table>"; 
+	return $data;
+}
+
+}
+
+$compobj = new Company();
+
+print $compobj->getHeader("LavenderBlush");
+print $compobj->getFooter("HoneyDew");
+// ----------------------------------   lab 6  --------------------------------
+
 
 $company_name = "Colindres-Benz Automaker";
 $company_address = "1234 Automaker Dr.";
@@ -6,6 +37,29 @@ $company_citystatezip = "Los Angeles, CA. 91344";
 $debug;
 $car_array;
 
+print "<h2>Lab 6 Assignment</h2>";
+
+function getHeader($name, $color) {
+	$data = "<table style='background-color:$color;width:100%'><tr><td>";
+	$data .= "<h1 style='text-align:center'>$name</h1>"; 
+	$data = $data . "</td></tr></table>"; 
+	return $data;
+}
+
+function getFooter($address,$cityStateZip,$color) {
+	$data = "<table style='background-color:$color;width:100%'><tr><td>";
+	$data .= "<p style='text-align:center'>$address $cityStateZip</p>"; 
+	$data = $data . "</td></tr></table>"; 
+	return $data;
+}
+
+print getHeader($company_name,"aqua");
+print getFooter($company_address, $company_citystatezip, "Aquamarine");
+
+
+print "<hr>";   //    This draws a line between lab assignments
+
+// ----------------------------------   lab 5  --------------------------------
 print "<h2>Lab 5 Assignment</h2>";
 
 function  create_array_cars (  )  {
@@ -36,7 +90,7 @@ displayProduct($car_array);
 print "<hr>";   //    This draws a line between lab assignments
 
 
-
+// ----------------------------------   lab 4  --------------------------------
 print "<h2>Lab 4 Assignment</h2>";
 
 
@@ -66,7 +120,7 @@ function display_company_address() {
 
 
 
-// ----------------------------------   lab 4   --------------------------------
+// ----------------------------------   lab 3   --------------------------------
 if (!empty($_REQUEST['debug'])) {
    $debug = true;
    print "DEBUG turned ON<br>";
@@ -92,7 +146,7 @@ else {
 
 print "<hr>";
 
-
+// ----------------------------------   lab 2  --------------------------------
 print "<h2>Lab 2 Assignment</h2>";
 
 
@@ -108,7 +162,7 @@ print "$company_address $company_citystatezip";
 print "<hr>";   //    This draws a line between lab assignments
 
 //---------------------     A comment line to separate each lab    ---------------------------
-
+// ----------------------------------   lab 1  --------------------------------
 print "<H2>Lab 1 Assignment</H2>";
 
    print "My name is Nestor Colindres";
